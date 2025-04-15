@@ -1,8 +1,53 @@
 /* ====== Base Styles ====== */
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   color: #434455;
   background-color: #ffffff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding-left: 0;
+  list-style-type: none;
+  display: flex;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  max-width: 1158px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+section {
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
 
 /* ====== Logo ====== */
@@ -14,6 +59,7 @@ body {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #4d5ae5;
+  margin-right: 76px;
 }
 
 .logo-accent {
@@ -21,6 +67,27 @@ body {
 }
 
 /* ====== Navigation ====== */
+.header {
+  border-bottom: 1px solid #e7e9fc;
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  height: 72px;
+  align-items: center;
+}
+
+.main-nav {
+  display: flex;
+  gap: 76px;
+  align-items: center;
+}
+
+.nav-list {
+  gap: 40px;
+}
+
 .nav-link {
   font-weight: 500;
   font-size: 16px;
@@ -28,6 +95,7 @@ body {
   letter-spacing: 0.02em;
   color: #2e2f42;
   text-decoration: none;
+  padding: 24px 0;
 }
 
 .nav-link:hover,
@@ -38,6 +106,10 @@ body {
 /* ====== Contacts ====== */
 .contacts {
   font-style: normal;
+}
+
+.contacts-list {
+  gap: 40px;
 }
 
 .contact-link {
@@ -54,8 +126,17 @@ body {
 }
 
 /* ====== Hero Section ====== */
+.hero .container {
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .hero {
   background-color: #2e2f42;
+  padding: 188px 0;
 }
 
 .hero-title {
@@ -64,6 +145,8 @@ body {
   text-align: center;
   letter-spacing: 0.02em;
   color: #ffffff;
+  margin-bottom: 48px;
+  max-width: 496px;
 }
 
 .hero-button {
@@ -75,6 +158,10 @@ body {
   letter-spacing: 0.04em;
   color: #ffffff;
   cursor: pointer;
+  min-width: 169px;
+  height: 56px;
+  border: none;
+  border-radius: 4px;
 }
 
 .hero-button:hover,
@@ -83,12 +170,35 @@ body {
 }
 
 /* ====== Features Section ====== */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.features-list {
+  gap: 24px;
+}
+
+.features-list .features-li {
+  width: calc((100% - 3 * 24px) / 4);
+}
+
 .feature-title {
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: #2e2f42;
+  margin-bottom: 8px;
 }
 
 .feature-text {
@@ -110,10 +220,21 @@ body {
   letter-spacing: 0.02em;
   text-transform: capitalize;
   color: #2e2f42;
+  margin-bottom: 72px;
+}
+
+.team-list {
+  gap: 24px;
 }
 
 .team-member {
   background-color: #ffffff;
+  border-radius: 0 0 4px 4px;
+  text-align: center;
+}
+
+.team-info {
+  padding: 32px 0;
 }
 
 .team-title {
@@ -122,6 +243,8 @@ body {
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: #2e2f42;
+  text-align: center;
+  margin-bottom: 8px;
 }
 
 .team-text {
@@ -132,12 +255,32 @@ body {
 }
 
 /* ====== Portfolio Section ====== */
+.portfolio-ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  row-gap: 48px;
+  list-style: none;
+}
+
+.portfolio-li {
+  width: calc((100% - 48px) / 3);
+  text-align: left;
+}
+
+.portfolio-info {
+  padding: 32px 16px;
+  border: 1px solid #e7e9fc;
+  border-top: none;
+}
+
 .portfolio-title {
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: #2e2f42;
+  margin-bottom: 8px;
 }
 
 .portfolio-text {
@@ -150,14 +293,26 @@ body {
 /* ====== Footer ====== */
 .footer {
   background-color: #2e2f42;
+  text-align: left;
+  padding: 100px 0;
+}
+
+.footer .container {
+  margin-left: 156px;
 }
 
 .logo-accent-one {
   color: #f4f4fd;
 }
 
+.footer .logo {
+  display: inline-block;
+  margin-bottom: 16px;
+}
+
 .footer-text {
   line-height: 1.5;
   color: #f4f4fd;
   letter-spacing: 0.02em;
+  max-width: 264px;
 }
