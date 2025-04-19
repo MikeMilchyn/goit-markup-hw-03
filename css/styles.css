@@ -126,13 +126,6 @@ section {
 }
 
 /* ====== Hero Section ====== */
-.hero .container {
-  height: 600px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
 
 .hero {
   background-color: #2e2f42;
@@ -145,16 +138,18 @@ section {
   text-align: center;
   letter-spacing: 0.02em;
   color: #ffffff;
-  margin-bottom: 48px;
+  margin: 0 auto 48px;
   max-width: 496px;
 }
 
 .hero-button {
+  display: block;
   background-color: #4d5ae5;
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
+  margin: 0 auto;
   letter-spacing: 0.04em;
   color: #ffffff;
   cursor: pointer;
